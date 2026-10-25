@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boulder Scout</title>
+    <style>:root{--ink:#1f2933;--muted:#616e7c;--line:#d9dee3;--panel:#fffffff2;--accent:#2f6f4f;--accent-ink:#fff;--bar:#1f2a24;color:var(--ink);font:13px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}html,body{height:100%;margin:0}body{background:var(--bar);flex-direction:column;display:flex}#topbar{background:var(--bar);color:#f4f7f5;flex:none;align-items:center;gap:12px;height:48px;padding:0 16px;display:flex}#topbar h1{letter-spacing:.2px;margin:0;font-size:17px;font-weight:600}#topbar .spacer{flex:1}#topbar .hint{color:#c9d3cd;font-size:12px}#bottombar{background:var(--bar);flex:none;height:8px}#main{flex:1;min-height:0;position:relative}#app{position:absolute;inset:0}button{font:inherit;color:var(--ink);border:1px solid var(--line);cursor:pointer;background:#fff;border-radius:6px;padding:4px 10px}button:hover{background:#f1f4f6}button.on,button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}button.on:hover,button.primary:hover{background:#255a40}button:disabled{opacity:.5;cursor:default}input[type=range]{accent-color:var(--accent)}#filters,#basemaps,#info,#photos{background:var(--panel);border-radius:8px;box-shadow:0 1px 4px #0003}#filters{z-index:1;padding:10px 12px;position:absolute;top:10px;left:10px}#filters label{color:var(--muted);margin-top:6px;display:block}#filters output{color:var(--ink);font-variant-numeric:tabular-nums}#filters input{width:180px;display:block}#basemaps{z-index:1;padding:8px 12px;position:absolute;bottom:10px;left:10px}#basemaps label{margin-right:6px}#info{z-index:3;overflow-wrap:anywhere;max-width:300px;padding:10px 12px;position:absolute;top:10px;right:10px}#info[hidden]{display:none}#info>b{color:var(--muted);font-size:12px;font-weight:500;display:block}#info table{margin:6px 0 8px}#info th{text-align:left;color:var(--muted);padding-right:12px;font-weight:400}#info td{text-align:right;font-variant-numeric:tabular-nums}#info .buttons{flex-wrap:wrap;gap:6px;display:flex}#review{border-top:1px solid var(--line);margin-top:8px;padding-top:6px}#review table{border-collapse:collapse;margin-bottom:6px}#review td,#review th{text-align:left;padding:1px 8px 1px 0}#review tr[data-band]{cursor:pointer}#review tr.on{background:#00e5ff55}#review .step{margin-top:6px}#photos{z-index:3;padding:8px 10px;position:absolute;top:10px;right:330px}#photos[hidden]{display:none}#photos figure{margin:0 0 6px}#photos figcaption{color:var(--muted);max-width:250px}#photos .photo{background:#ddd;border-radius:4px;width:250px;height:250px;position:relative;overflow:hidden}#photos img{display:block}#photos .photo:after{content:"";pointer-events:none;background:linear-gradient(#ff0,#ff0) top/2px 14px no-repeat,linear-gradient(#ff0,#ff0) bottom/2px 14px no-repeat,linear-gradient(#ff0,#ff0) 0/14px 2px no-repeat,linear-gradient(#ff0,#ff0) 100%/14px 2px no-repeat;position:absolute;inset:0}#review-panel{border-top:1px solid var(--line);margin-top:8px;padding-top:6px}#review-panel label{display:block}#review-panel .tags{margin:4px 0 4px 16px}#info textarea{box-sizing:border-box;width:100%}#view3d{z-index:2;resize:both;background:#f4f4f0;border-radius:8px;width:480px;min-width:240px;height:400px;min-height:200px;position:absolute;top:10px;left:250px;overflow:hidden;box-shadow:0 1px 6px #0006}#view3d[hidden]{display:none}#view3d header{align-items:start;gap:8px;font-size:12px;display:flex;position:absolute;top:6px;left:8px;right:8px}</style>
+    <script type="module" crossorigin src="/boulder-scout-demo/assets/index-BToDSang.js"></script>
+    <link rel="stylesheet" crossorigin href="/boulder-scout-demo/assets/index-DBE96hFo.css">
+  </head>
+  <body>
+    <header id="topbar">
+      <h1>Boulder Scout</h1>
+      <span class="spacer"></span>
+      <span class="hint" id="exporthint"></span>
+      <button id="export" class="primary" title="Downloads a KML file of the saved boulders; import it in Google My Maps (mymaps.google.com)">Export as KML</button>
+    </header>
+    <div id="main">
+      <div id="app"></div>
+      <div id="filters"><b id="count"></b></div>
+      <div id="basemaps">
+        <label><input type="radio" name="basemap" value="imagery" checked> Imagery</label>
+        <label><input type="radio" name="basemap" value="osm"> Map</label>
+      </div>
+      <div id="info" hidden></div>
+      <div id="view3d" hidden>
+        <header><button id="close3d">Close</button><span id="caption3d"></span></header>
+      </div>
+    </div>
+    <div id="bottombar"></div>
+  </body>
+</html>
