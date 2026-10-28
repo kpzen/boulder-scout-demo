@@ -3,9 +3,9 @@
 **Open the map: https://kpzen.github.io/boulder-scout-demo/**
 
 Boulder Scout finds likely climbable boulders in Swedish forest from Lantmäteriet's LiDAR, so
-climbers can scout new areas from home. This demo shows about 34,000 candidates over
-3,300 km² of forest around Överturingen, central Sweden. It is a static site built by Boulder Scout's demo build; the code is not in this
-repository.
+climbers can scout new areas from home. This demo shows about 38,000 candidates over
+4,200 km² of forest around Överturingen and in two areas of Gävleborg, central Sweden. It is a static site built by Boulder Scout's demo build; the code is at
+https://github.com/kpzen/boulder-scout.
 
 ## Reading the map
 - Each pin is a candidate boulder found in the LiDAR. Its colour is its score, how likely it is
